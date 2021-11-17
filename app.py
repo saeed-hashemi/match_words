@@ -10,7 +10,7 @@ if __name__ == "__main__":
     pre_process("[a-z]{3,10}$")
 
     # load dictionary
-    df = pd.read_json("data/dictionary.json", typ='series')
+    dictionary = pd.read_json("data/dictionary.json", typ='series')
 
     # read grid of chracters from input
     while True:
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     results = []
     # seeking for matching words (if a word exist in the grid add it to results)
-    for i in range(df.size):
-        if (checkMatch(grid, df[i])):
-            results.append(df[i])
+    for i in range(dictionary.size):
+        if (checkMatch(grid, dictionary[i])):
+            results.append(dictionary[i])
     print(results)
