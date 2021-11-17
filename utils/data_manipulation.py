@@ -14,6 +14,6 @@ def pre_process(regex):
     --------------------
     None
     """
-    sr = pd.read_json("dict.json", typ='series')
+    sr = pd.read_json("data/dict.json", typ='series')
     sr = sr[sr.str.match(regex)]
-    sr.to_json("dictionary.json", orient='values')
+    sr.to_json("data/dictionary.json", orient='values')

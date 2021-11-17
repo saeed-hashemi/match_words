@@ -9,7 +9,7 @@ class testPreProcess(unittest.TestCase):
     def setUp(self):
         self.regex = "[a-z]{3,10}$"
         pre_process(self.regex)
-        self.sr = pd.read_json("dictionary.json", typ='series')
+        self.sr = pd.read_json("data/dictionary.json", typ='series')
 
     def test_pre_process(self):
         """

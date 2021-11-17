@@ -10,7 +10,7 @@ if __name__ == "__main__":
     pre_process("[a-z]{3,10}$")
 
     # load dictionary
-    df = pd.read_json("dictionary.json", typ='series')
+    df = pd.read_json("data/dictionary.json", typ='series')
 
     # read grid of chracters from input
     while True:
